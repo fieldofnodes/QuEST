@@ -227,15 +227,15 @@ else
 endif
 
 # c
-C_CLANG_FLAGS = -O2 -std=c99 -mavx -Wall -DQuEST_PREC=$(PRECISION)
-C_GNU_FLAGS = -O2 -std=c99 -mavx -Wall -DQuEST_PREC=$(PRECISION) $(THREAD_FLAGS)
-C_INTEL_FLAGS = -O2 -std=c99 -fprotect-parens -Wall -xAVX -axCORE-AVX2 -diag-disable -cpu-dispatch -DQuEST_PREC=$(PRECISION) $(THREAD_FLAGS)
+C_CLANG_FLAGS = -O2 -std=c99  -Wall -DQuEST_PREC=$(PRECISION)
+C_GNU_FLAGS = -O2 -std=c99  -Wall -DQuEST_PREC=$(PRECISION) $(THREAD_FLAGS)
+C_INTEL_FLAGS = -O2 -std=c99 -fprotect-parens -Wall  -diag-disable -cpu-dispatch -DQuEST_PREC=$(PRECISION) $(THREAD_FLAGS)
 C_MSVC_FLAGS = -O2 -EHs -DQuEST_PREC=$(PRECISION) $(THREAD_FLAGS) -nologo -DDWIN$(WINDOWS_ARCH) -D_WINDOWS -Fo$@
 
 # c++
-CPP_CLANG_FLAGS = -O2 -std=c++11 -mavx -Wall -DQuEST_PREC=$(PRECISION)
-CPP_GNU_FLAGS = -O2 -std=c++11 -mavx -Wall -DQuEST_PREC=$(PRECISION) $(THREAD_FLAGS)
-CPP_INTEL_FLAGS = -O2 -std=c++11 -fprotect-parens -Wall -xAVX -axCORE-AVX2 -diag-disable -cpu-dispatch -DQuEST_PREC=$(PRECISION) $(THREAD_FLAGS)
+CPP_CLANG_FLAGS = -O2 -std=c++11  -Wall -DQuEST_PREC=$(PRECISION)
+CPP_GNU_FLAGS = -O2 -std=c++11  -Wall -DQuEST_PREC=$(PRECISION) $(THREAD_FLAGS)
+CPP_INTEL_FLAGS = -O2 -std=c++11 -fprotect-parens -Wall  -diag-disable -cpu-dispatch -DQuEST_PREC=$(PRECISION) $(THREAD_FLAGS)
 CPP_MSVC_FLAGS = -O2 -EHs -std:c++latest -DQuEST_PREC=$(PRECISION) $(THREAD_FLAGS) -nologo -DDWIN$(WINDOWS_ARCH) -D_WINDOWS -Fo$@
 
 # wrappers
