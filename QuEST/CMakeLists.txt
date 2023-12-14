@@ -262,17 +262,17 @@ set(CMAKE_C_FLAGS_RELEASE
 if ("${CMAKE_C_COMPILER_ID}" STREQUAL "Clang")
   # using Clang
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} \
-    -mavx -Wall"
+     -Wall"
   )
 elseif ("${CMAKE_C_COMPILER_ID}" STREQUAL "GNU")
   # using GCC
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} \
-    -mavx -Wall"
+     -Wall"
   )
 elseif ("${CMAKE_C_COMPILER_ID}" STREQUAL "Intel")
   # using Intel
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} \
-    -fprotect-parens -Wall -xAVX -axCORE-AVX2 -diag-disable cpu-dispatch"
+    -fprotect-parens -Wall   -diag-disable cpu-dispatch"
   )
 elseif ("${CMAKE_C_COMPILER_ID}" STREQUAL "MSVC")
   # using Visual Studio
@@ -320,17 +320,17 @@ endif()
 if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
   # using Clang
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
-    -mavx -Wall"
+     -Wall"
   )
 elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
   # using GCC
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
-    -mavx -Wall"
+     -Wall"
   )
 elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Intel")
   # using Intel
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
-    -xAVX -axCORE-AVX2 -diag-disable -cpu-dispatch -Wall"
+      -diag-disable -cpu-dispatch -Wall"
   )
 elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
   # using Visual Studio
